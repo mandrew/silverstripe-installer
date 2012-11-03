@@ -20,7 +20,6 @@
 		"silverstripe/restassured": "*",
 		"silverstripe/spamprotection": "*",
 		"silverstripe/sqlite3": "*",
-		"silverstripe/staticpublisher": "*",
 		"silverstripe/subsites": "*",
 		"silverstripe/translatable": "*",
 		"silverstripe/userforms": "*",
