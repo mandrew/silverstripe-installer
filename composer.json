@@ -5,7 +5,29 @@
 		"php": ">=5.3.2",
 		"silverstripe/cms": "3.0.x-dev",
 		"silverstripe/framework": "3.0.x-dev",
-		"silverstripe-themes/simple": "*"
+		"silverstripe-themes/simple": "*",
+		"silverstripe/blog": "*",
+		"silverstripe/comments": "*",
+		"silverstripe/docsviewer": "*",
+		"silverstripe/dynamictemplate": "*",
+		"silverstripe/environmentcheck": "*",
+		"silverstripe/forum": "*",
+		"silverstripe/fulltextsearch": "*",
+		"silverstripe/environmentcheck": "*",
+		"silverstripe/mobile": "*",
+		"silverstripe/mssql": "*",
+		"silverstripe/postgresql": "*",
+		"silverstripe/restassured": "*",
+		"silverstripe/spamprotection": "*",
+		"silverstripe/sqlite3": "*",
+		"silverstripe/staticpublisher": "*",
+		"silverstripe/subsites": "*",
+		"silverstripe/translatable": "*",
+		"silverstripe/userforms": "*",
+		"silverstripe/widgets": "*"
+	},
+	"require-dev": {
+		"silverstripe/compass": "*"
 	},
 	"minimum-stability": "dev"
 }
