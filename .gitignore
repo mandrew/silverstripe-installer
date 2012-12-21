@@ -1,7 +1,7 @@
 assets/*
 _ss_environment.php
 tools/phing-metadata
-silverstripe-cache
+silverstripe-cache/*
 .buildpath
 .project
 .settings
@@ -9,3 +9,6 @@ silverstripe-cache
 .DS_Store
 vendor/
 composer.lock
+*.kpf
+*.komodoproject
+.komodotools
