@@ -3,9 +3,6 @@
 global $project;
 $project = 'mysite';
 
-global $database;
-$database = '';
-
 require_once('conf/ConfigureFromEnv.php');
 
 Email::setAdminEmail('Better Brief <betterbrief@gmail.com>');
