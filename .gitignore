@@ -9,3 +9,6 @@ silverstripe-cache
 .DS_Store
 vendor/
 composer.lock
+*.kpf
+*.komodoproject
+.komodotools
