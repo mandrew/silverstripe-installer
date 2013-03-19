@@ -15,13 +15,19 @@ if (!defined('SS_ENVIRONMENT_FILE')) {
 		"password" => "",
 		"database" => ""
 	);
-	$emailWriter = new SS_LogEmailWriter('betterbrief@gmail.com');
-	$emailWriter->setFormatter(new BB_LogErrorEmailFormatter());
-	SS_Log::add_writer($emailWriter);
-	Config::inst()->update('GoogleSitemap', 'google_notification_enabled', true);
 }
 
-Email::setAdminEmail('Better Brief <betterbrief@gmail.com>');
+if(Director::set_environment_type('live')) {
+	// Define Live site settings
+	Email::setAdminEmail('Better Brief <betterbrief+[user]@gmail.com>');
+	$emailWriter = new SS_LogEmailWriter('betterbrief+[user]@gmail.com');
+	$emailWriter->setFormatter(new BB_LogErrorEmailFormatter());
+	SS_Log::add_writer($emailWriter);
+	GoogleSitemap::enable_google_notification();
+} else {
+	// Define Dev/Stage settings
+	Email::setAdminEmail('Better Brief <betterbrief+[user]@gmail.com>');
+}
 
 // stop the user being able to select h1 in the editor!
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_blockformats', 'p,h2,h3,h4,h5,h6,address,pre');
