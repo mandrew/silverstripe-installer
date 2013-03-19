@@ -15,13 +15,17 @@ if (!defined('SS_ENVIRONMENT_FILE')) {
 		"password" => "",
 		"database" => ""
 	);
+}
+
+Email::setAdminEmail('Better Brief <betterbrief+[user]@gmail.com>');
+
+if (Director::isLive()) {
 	$emailWriter = new SS_LogEmailWriter('betterbrief+[user]@gmail.com');
 	$emailWriter->setFormatter(new BB_LogErrorEmailFormatter());
 	SS_Log::add_writer($emailWriter);
 	Config::inst()->update('GoogleSitemap', 'google_notification_enabled', true);
+	//Email::setAdminEmail('Better Brief <betterbrief+[user]@gmail.com>');
 }
-
-Email::setAdminEmail('Better Brief <betterbrief+[user]@gmail.com>');
 
 // stop the user being able to select h1 in the editor!
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_blockformats', 'p,h2,h3,h4,h5,h6,address,pre');
@@ -37,7 +41,7 @@ MySQLDatabase::set_connection_charset('utf8');
 SSViewer::set_theme('default');
 
 // Set image quality
-GD::set_default_quality(85);
+//GD::set_default_quality(85);
 
 // Set the correct default language, this is used for Users
 // and for the content-language meta tag
